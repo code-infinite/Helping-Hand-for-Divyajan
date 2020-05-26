@@ -1,0 +1,2 @@
+include ':app', ':aars', ':models'
+rootProject.name='PySenses'

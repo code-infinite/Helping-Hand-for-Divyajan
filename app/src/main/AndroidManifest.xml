@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.helpinghand.pysenses">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature android:name="android.hardware.Camera" />
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="false" />
+
+    <application
+        android:name="com.chaquo.python.android.PyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:logo="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="com.helpinghand.pysenses.SplashScreen"
+            android:screenOrientation="nosensor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.helpinghand.pysenses.DumbActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="nosensor"/>
+        <activity android:name="com.helpinghand.pysenses.SelectType"
+            android:screenOrientation="nosensor"/>
+        <activity android:name="com.helpinghand.pysenses.MainActivity"
+            android:screenOrientation="nosensor"/>
+        <activity android:name="com.helpinghand.pysenses.DeafActivity"
+            android:screenOrientation="nosensor"/>
+
+        <service
+            android:name="cameraServices.CameraController"
+            android:exported="false" />
+        <service
+            android:name="cameraServices.Camera2Api"
+            android:exported="false" />
+        <service android:name="cameraServices.CameraApi" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

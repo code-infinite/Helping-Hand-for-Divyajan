@@ -5,10 +5,3 @@ Many people with one or more physical disabilities face many challenges to their
 # Link to Video
 
 https://youtu.be/egd1Hy4SibY
-
-
-# Team
-
-Chudasama Rushirajsinh  
-Bhatt Akash  
-Christian Joy  
